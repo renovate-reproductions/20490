@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "enabledManagers": [
+    "regex"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^sample_maven.cfg$"],
+      "matchStrings": ["value: \"graalvm:(?<currentValue>.*?)\""],
+      "depNameTemplate": "org.graalvm.sdk:graal-sdk",
+      "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^sample_docker.cfg$"],
+      "matchStrings": ["value: \"graalvm:(?<currentValue>.*?)\""],
+      "depNameTemplate": "ghcr.io/graalvm/jdk",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
