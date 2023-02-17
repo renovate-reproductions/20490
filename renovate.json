@@ -17,6 +17,12 @@
       "matchStrings": ["value: \"graalvm:(?<currentValue>.*?)\""],
       "depNameTemplate": "ghcr.io/graalvm/jdk",
       "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["^sample_dockerhub.cfg$"],
+      "matchStrings": ["value: \"ubuntu:(?<currentValue>.*?)\""],
+      "depNameTemplate": "ubuntu",
+      "datasourceTemplate": "docker"
     }
   ]
 }
